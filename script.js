@@ -28,9 +28,7 @@ login.addEventListener('click', function () {
 })
 
 btn.addEventListener("click", function () {
-   btn.addEventListener
    let emailValue = emailInput.value.trim();
-   let passwordValue = emailInput.value.trim();
 
 
    if (emailPattern.test(emailValue)) {
@@ -45,99 +43,21 @@ btn.addEventListener("click", function () {
       }
       emailInput.style.border = "3px solid red";
    }
+   let passwordValue = emailInput.value.trim();
+
    if (passwordPattern.test(passwordValue)) {
       PasswordError.textContent = "Strong password ✅";
       passwordInput.style.border = "3px solid green";
    } else {
-      PasswordError.textContent = passwordValue === ""
-         ? "Password field can't be empty"
-         : "Password must be at least 8 characters, include letters and numbers";
-      passwordInput.style.border = "3px solid red";
+      PasswordError.textContent = "password length must grater than 5 charr";
+      PasswordError.style.color = "red";
    }
 
 
 })
-// })
-
-
-
-// يمكنك استخدام الزر للتحقق النهائي مثلاً
-// btn.addEventListener("click", function (e) {
-//    e.preventDefault(); // إذا كنت داخل form
-//    const emailValue = emailInput.value;
-
-//    if (emailPattern.test(emailValue)) {
-//       alert("Email is valid, submitting form...");
-//    } else {
-//       alert("Please enter a valid email.");
-//    }
-// });
 
 
 
 
-
-
-
-
-// if (emailPattern.test(emailValue)) {
-//    //          //message.textContent = "Valid email ✅";
-//    //          EmailError.textContent = ""
-//    //          emailInput.style.border = "green 5px solid";
-//    //          e.preventDefault()
-
-
-//    //       }
-
-// })
-emailInput.value = ""
-
-// LoginForm.addEventListener("click", validation)
-
-
-// LoginForm.addEventListener("click", function (e) {
-//    e.preventDefault()
-
-//    const emailValue = emailInput.value;
-//    // Simple email validation regex
-//    const emailPattern = /^[^\@]+@[^\@]+\.(com|net|org|edu)$/i;
-//    emailInput.addEventListener("input", function (e) {
-
-//       if (emailPattern.test(emailValue)) {
-//          //message.textContent = "Valid email ✅";
-//          EmailError.textContent = ""
-//          emailInput.style.border = "green 5px solid";
-//          e.preventDefault()
-
-
-//       } else {
-//          EmailError.textContent = "Invalid email ";
-//          EmailError.style.color = "red";
-//       }
-//    })
-
-//    password.addEventListener("input", function (e) {
-//       if (password.value.length > 6) {
-
-//          // e.preventDefault()
-//          PasswordError.textContent = ""
-//          password.style.border = "green 5px solid";
-
-
-//       }
-//       else {
-//          PasswordError.textContent = "password length must grater than 5 charr";
-//          PasswordError.style.color = "red";
-//       }
-//    })
-
-// })
-
-// var el = $("#form-box1");
-
-// $("h3").on("click", function () {
-//    var el = $("#form-box1");
-//    el.toggle();
-// });
 
 
